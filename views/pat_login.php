@@ -20,7 +20,7 @@
     </nav>
 
     <div id="login_div">
-        <form id="login_form" action="/major/controllers/val_login.php" method="POST">
+        <form id="login_form" action="/major/controllers/pat_val_login.php" method="POST">
             <table id="login_table">
                 <tr>
                     <h3 style="color: crimson;">Patients Login</h3>

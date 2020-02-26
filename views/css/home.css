@@ -1,0 +1,40 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    padding: 0;
+    margin: 0;
+    overflow-y: hidden;
+}
+
+#navbar{
+    width: auto;
+    height: 3rem;
+    background-color: crimson;
+    padding: 0;
+    margin: 0;
+}
+
+#ul_nav{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#li_nav_options{
+    display: inline;
+    float: right;
+    padding: 1rem 2.5rem 1rem 2rem ;
+}
+
+#li_nav_options a{
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+
+#doc_image_div {
+    bottom: -1%;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    left: 1%;
+}
