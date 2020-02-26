@@ -23,11 +23,20 @@
 
             $password_from_user = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-            $sql = "INSERT INTO `users`(person_name,age,mobile,person_address,email,username,user_password,doc_pat) 
-            values('".$_POST["name"]."', '".$_POST["age"]."', 
-            '".$_POST["mobile"]."', '".$_POST["address"]."', 
-            '".$_POST["email"]."', '".$_POST["username"]."', 
-            '$password_from_user', '".$_POST["doc_pat"]."')";
+            if($_POST['doc_pat'] == 'doctor'){
+                $sql = "INSERT INTO `doc_users`(person_name,age,mobile,person_address,email,username,user_password,doc_pat) 
+                values('".$_POST["name"]."', '".$_POST["age"]."', 
+                '".$_POST["mobile"]."', '".$_POST["address"]."', 
+                '".$_POST["email"]."', '".$_POST["username"]."', 
+                '$password_from_user', '".$_POST["doc_pat"]."')";
+            }
+            else{
+                $sql = "INSERT INTO `pat_users`(person_name,age,mobile,person_address,email,username,user_password,doc_pat) 
+                values('".$_POST["name"]."', '".$_POST["age"]."', 
+                '".$_POST["mobile"]."', '".$_POST["address"]."', 
+                '".$_POST["email"]."', '".$_POST["username"]."', 
+                '$password_from_user', '".$_POST["doc_pat"]."')";
+            }
 
             $conn->exec($sql);
 
@@ -48,15 +57,14 @@
     <nav id="navbar">
         <ul id="ul_nav">
             <li id="li_nav_options"><a href="index.php">Home</a></li>
-            <li id="li_nav_options"><a href="/doc">Doctor</a></li>
-            <li id="li_nav_options"><a href="/pat">Patient</a></li>
+            <li id="li_nav_options"><a href="doc_login.php">Doctor</a></li>
+            <li id="li_nav_options"><a href="pat_login.php">Patient</a></li>
             <li id="li_nav_options"><a href="/contact">Contact</a></li>
-            <li id="li_nav_options"><a href="login.php">Login</a></li>
         </ul>
     </nav>
 
     <div id="register_div">
-        <form id="register" action="/major/index.php" method="POST">
+        <form id="register" action="/major/views/index.php" method="POST">
             <table id="table_form">
                 <tr>
                     <td><h2>Register here:</h2></td>
@@ -100,7 +108,7 @@
     </div>
 
     <div id="doc_image_div">
-        <img src="images/doc.jpg" alt="" height="50%" width="50%">
+        <img src="../images/doc.jpg" alt="" height="50%" width="50%">
     </div>
 
 </body>
