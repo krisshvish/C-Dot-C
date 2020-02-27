@@ -13,4 +13,4 @@ For patients:
 For Doctors:
 - Provide prescriptions for small illnesses that don't require immediate consultation.
 
-![Doctor][/images/doc.jpg]
+![Doctor](/images/doc.jpg)
