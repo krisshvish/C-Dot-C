@@ -8,6 +8,9 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/login.css">
 </head>
+<?php 
+    session_start();
+?>
 <body>
     
     <nav id="navbar">
@@ -35,6 +38,12 @@
                 </tr>
             </table>
             <button id="login_button" type="submit">Login</button>
+            <?php
+                if($_SESSION['val_doc_login_flag'] == 0){
+                    $_SESSION['val_doc_login_flag'] = 1;
+
+            ?>
+            <h6 style="color:red;"><?php echo $_SESSION['login_message']; }?></h6>
         </form>
     </div>
     

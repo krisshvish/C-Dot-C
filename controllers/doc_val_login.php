@@ -1,4 +1,6 @@
 <?php
+    session_start();
+    $_SESSION['login_message'] = "The username or password you typed was incorrect";
 
     $username = "root";
     $password = "admin";
@@ -22,15 +24,18 @@
             if($count>0)
             {
                 if(password_verify($_POST['password'], $user['user_password'])) {
-                    header('location:/major/views/doc_home.html');
+                    $_SESSION['user_username'] = $_POST['username'];
+                    $_SESSION['doc_home_access'] = true;
+                    header('location:/major/views/doc_home.php');
                 }
                 else{
-                    echo "fail"."<br>".$user['user_password']."<br>".$_POST['password'];
+                    $_SESSION['val_doc_login_flag'] = 0;
+                    header('location:/major/views/doc_login.php');                
                 }
             }
             else{
-                echo "Fail";
-            }
+                $_SESSION['val_doc_login_flag'] = 0;
+                header('location:/major/views/doc_login.php');            }
         }
     }
 

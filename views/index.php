@@ -8,6 +8,9 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/index.css">
 </head>
+<?php 
+    session_start();
+?>
 <?php
 
     $username = "root";

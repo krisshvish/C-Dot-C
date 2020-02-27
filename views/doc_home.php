@@ -7,19 +7,25 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/home.css">
+
 </head>
+<?php
+    session_start();
+
+    if($_SESSION['doc_home_access'] == false){
+        header('location:/major/views/404.html');
+    }
+?>
 <body>
     
     <nav id="navbar">
         <ul id="ul_nav">            
-            <li id="li_nav_options"><a href="index.php">Logout</a></li>
+            <li id="li_nav_options"><a href="/major/controllers/logout.php">Logout</a></li>
             <li id="li_nav_options"><a href="" id="diagnosis_a">Diagnosis &#8661</a></li>
-            <li id="li_nav_options"><a href="">Test</a></li>
-            <li id="li_nav_options"><a href="">Test2</a></li>
         </ul>
     </nav>
 
-    <h3 style="color: crimson;">Doctors Hello</h3>
+    <h3 style="color: crimson;">Hello, <?php echo $_SESSION['user_username']; ?></h3>
     
     <div id="doc_image_div">
         <img src="../images/doc.jpg" alt="" height="50%" width="50%">
