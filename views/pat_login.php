@@ -3,10 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-signin-client_id" content="746728098784-t27gh8rmupq9aab6v8a7idetr6ptcsh0.apps.googleusercontent.com">
     <title>C[Dot]C</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/login.css">
+    <!-- JS -->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
 </head>
 <?php 
     session_start();
@@ -37,7 +41,12 @@
                     <td><input type="password" name="password" id=""></td>
                 </tr>
             </table>
-            <button id="login_button" type="submit">Login</button>
+            <div class="login_buttons_div">
+                <ul id="login_buttons_ul">
+                    <li id="login_buttons_li"><button id="login_button" type="submit">Login</button></li>
+                    <li id="login_buttons_li"><div class="g-signin2" data-onsuccess="onSignIn"></div></li>
+                </ul>
+            </div>
             <?php
                 if($_SESSION['val_pat_login_flag'] == 0){
                     $_SESSION['val_pat_login_flag'] = 1;

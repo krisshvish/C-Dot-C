@@ -31,6 +31,28 @@ body {
     text-align: center;
 }
 
+#disease_div {
+    padding: 1.5rem;
+    margin: 1rem 0 0rem 0;
+    position: absolute;
+    height: 100%;
+    max-height: 80%;
+    width: 45%;
+    left: 25%;
+    border: 1px solid rgb(87, 86, 86);
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px #aaaaaa;
+}
+
+.disease_table tr {
+    display: block;
+}
+
+#disease_form {
+    margin: -0.5rem 1rem 0 0;
+    width: 100%;
+}
+
 #doc_image_div {
     bottom: -1%;
     padding: 0;
@@ -39,54 +61,36 @@ body {
     left: 1%;
 }
 
-#login_div {
-    left: 40%;
-    height: 20%;
-    width: 20%;
-    max-width: 100%;
-    position: relative;
-    border: 1px solid black;
-    box-shadow: 5px 5px 5px 5px #aaaaaa;
-    border-radius: 5px;
-    padding: 1rem 2.5rem 2rem 2rem;
-    margin-top: 7rem;
-}
-
-table tr td input{
-    margin: 0.5rem;
-}
-
-#login_button {
+#dis_button {
     color: crimson;
     background-color: white;
     border: 1px solid crimson;
     border-radius: 3px;
     width: 6rem;
     height: 2rem;
-    /* margin-top: 1rem; */
-    font-size: medium;
+    margin-top: 1rem;
+    font-size: small;
     cursor: pointer;
-    position: relative;
-    margin-right: 0.5rem;
 }
 
-#login_button:hover {
+#dis_button:hover {
     color: white;
     background-color: crimson;
 }
 
-#login_buttons_ul {
-    list-style-type: none;
-}
-
-#login_buttons_li {
-    display: inline-block;
-}
-
-.g-signin2 {
-    position: relative;
+.add_symptom {
+    color: crimson;
+    background-color: white;
+    border: 1px solid crimson;
+    border-radius: 3px;
+    width: 7rem;
     height: 2rem;
-    width: 6rem;
-    border-radius: 10px;
-    
+    margin-top: 1rem;
+    font-size: small;
+    cursor: pointer;
+}
+
+.add_symptom:hover {
+    color: white;
+    background-color: crimson;
 }

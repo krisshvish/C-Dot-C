@@ -42,7 +42,7 @@
     <nav id="navbar">
         <ul id="ul_nav">            
             <li id="li_nav_options"><a href="/major/controllers/logout.php">Logout</a></li>
-            <li id="li_nav_options"><a href="" id="diagnosis_a">Diagnosis &#8661</a></li>
+            <li id="li_nav_options"><a href="/major/views/disease.php">Predictor</a></li>
         </ul>
     </nav>
 
